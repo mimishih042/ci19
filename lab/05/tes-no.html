@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+<style>
+  html,body{
+    height: 100%;
+  }
+
+  body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1{
+    /*either vw or vh*/
+    font-size: 20vmin;
+  }
+
+</style>
+
+</head>
+
+<body>
+  <h1></h1>
+
+<script>
+  var headers = document.querySelectorAll("h1");
+  console.log(headers);
+
+  var header = headers[0];
+  console.log(header);
+
+  header.innerHTML = "Yes" ;
+
+  if(Math.random() < 0.5){
+    header.innerHTML = "Yes";
+  }else{
+    header.innerHTML = "No";
+  }
+
+</script>
+</body>
+</html>

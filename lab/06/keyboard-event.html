@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+
+  <script>
+    var typewriter = "";  
+
+    document.onkeydown = function(event){
+      console.log(event);
+      typewriter = typewriter + event.key;
+      document.body.innerHTML = typewriter;
+
+      if(event.key == "z"){
+        document.body.style.backgroundColor = "Pink";
+      }
+
+    }
+  </script>
+
+</body>
+</html>

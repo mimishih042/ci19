@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+</head>
+<style>
+  html{
+    font-family: 'Crimson Text', serif;
+  }
+  body{
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 100px auto;
+    margin: 40px;
+  }
+  .title{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+  }
+  .sidebar{
+    background-color: lightpink;
+  }
+  .content{
+    padding: 1em;
+  }
+  ul{
+    list-style: none;
+  }
+
+  /* mobile layout*/
+  @media (max-width: 600px){
+    .sidebar{
+      grid-column-start: 1;
+      grid-column-end: 3;
+      font-size: 100%;
+    }
+
+    ul{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+    }
+
+    .content{
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    body{
+      grid-template-rows: 100px auto auto;
+      margin: 0;
+    }
+
+  }
+
+
+</style>
+
+<body>
+  <div class="title">
+    <h1>Mimi Shih</h1>
+  </div>
+  <div class="sidebar">
+    <ul>
+      <li>Design</li>
+      <li>Illustration</li>
+      <li>Music</li>
+      <li>Eating</li>
+    </ul>
+  </div>
+  <div class="content">
+    <h3>About Mimi</h3>
+    <p>Lorem ipsum dolor sit amet, no tota adhuc mea, mei te vituperata suscipiantur. Eu idque delicatissimi vim, in persius iracundia quo, eum ei suas verear. Cibo omittantur in quo, has ea dolor fuisset delectus. Ea noster aliquam usu. Illum ignota tractatos cum at. Nec nostrud deseruisse ad.</div>
+
+
+
+</body>
+</html>

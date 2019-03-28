@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    html,body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin: 0;
+    }
+    h1{
+      font-size: 20vmin;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1 id="hex-color"></h1>
+
+  <script>
+    var choices = ["0","1","2","3","4","5","6","7","8","9","0"];
+    // console.log(choices); 
+    // console.log(choices[Math.floor(Math.random()*11)]);   
+
+    var hexColor = "#";
+
+    hexColor = hexColor + choices[Math.floor(Math.random()*11)];
+    hexColor = hexColor + choices[Math.floor(Math.random()*11)];
+    hexColor = hexColor + choices[Math.floor(Math.random()*11)];
+    hexColor = hexColor + choices[Math.floor(Math.random()*11)];
+    hexColor = hexColor + choices[Math.floor(Math.random()*11)];
+    hexColor = hexColor + choices[Math.floor(Math.random()*11)];
+
+    console.log(hexColor);
+    document.body.style.backgroundColor = hexColor;
+    document.querySelector("#hex-color").innerHTML = hexColor;
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<title>media queries</title>
+
+<style>
+  
+/*mobile layout*/
+  body{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 75px 120px 50px 100px;
+  }
+/*desktop layout // can it be hovered??*/
+  @media(hover) and (min-width: 600px){
+    body{
+      grid-template-columns: 100px auto 100px;
+      grid-template-rows: 100px 500px;
+    }
+  }
+
+  @media(hover) and (min-width: 1000px){
+    body{
+      grid-template-columns: 200px auto 200px;
+      grid-template-rows: 100px 500px;
+    }
+  }
+
+  div:nth-child(odd){
+    background-color: yellow;
+  }
+  div:nth-child(even){
+    background-color: orange;
+  }
+
+</style>
+
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+</body>

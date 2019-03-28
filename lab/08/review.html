@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<title>review</title>
+
+<script>
+  
+var nothing = undefined;
+var bool = true;
+var string = "hi";
+var number = 3.14;
+var array = [];
+var object = {};
+var func = function(argument){};
+
+var weatherArray = [
+  5,20,false
+];
+
+console.log(weatherArray[1]);
+console.log(weatherArray);
+
+var weather = {
+  temperature : 5,
+  humidity : 20,
+  isRaining : false
+};
+
+//console is a variable and log is a function
+console.log(weather);
+console.log(weather["humidity"]);
+console.log(weather.humidity);
+
+
+//level 1: "NYC", "TAIWAN"
+//level 2: "temp",......
+//level 3: for temperature only: array of numbers
+
+var weathers = {
+  nyc:{
+    temperature : [5,10,15,20],
+    humidity : 20,
+    isRaining : false
+  },
+  taipei:{
+    temperature : [25,30,35,40],
+    humidity : 30,
+    isRaining : true
+  }
+};
+
+console.log(weathers);
+console.log(weathers.nyc.temperature[0]);
+
+
+</script>

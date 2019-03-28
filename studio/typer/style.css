@@ -1,0 +1,1035 @@
+body {
+  background-color: #f1f1f1;
+  font-family: 'Overpass', sans-serif;
+  font-size: 20px;
+}
+
+/*.noShow{
+  display: none;
+}*/
+
+/* ----------- switch ------------- */
+.switch-container{
+  display: inline-block;
+  padding-left: 65px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FF4C24;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #CCC;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #FFF;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* ------------ end of the switch ----------- */
+
+
+/* --------------- bgbutton ---------------- */
+
+#title{
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #352DB2;
+}
+
+#container1{
+  display: block;
+  width: 1050px;
+  margin-top: 70px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.change-bg{
+  margin-left: 750px;
+  display: inline-block;
+}
+
+.bgColorButton{
+  margin-right: 5px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: violet;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .3); 
+}
+
+.bgColorButton:hover{
+  box-shadow: none; 
+}
+
+
+#letter-grid{
+  margin-top: 100px;
+  display: grid;
+  grid-template-rows: 150px 150px 150px 150px ;
+  grid-template-columns:  150px 150px 150px 150px 150px 150px 150px; 
+
+}
+
+#letter-grid div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d0cfdc;
+}
+
+.circle{
+  position: absolute;
+  z-index: 10;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #F66746CC;
+  width: 100px;
+  height: 100px;
+}
+
+/*-----------letter A---------------*/
+
+.dot1{
+  position: absolute;
+  z-index: 11;
+  background-color: #CE220D;
+  width: 10px;
+  height: 10px;
+  left: -30px;
+  top: -30px;
+  border-radius: 50%;
+  animation-name: dot1-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot1-animation {
+  70%   {background-color: #CE220D}
+  100% {left: 280px; top: 330px; background-color: #CE220D00;}
+}
+
+
+/* -------------- letter B --------------  */
+
+.dot2{
+  position: absolute;
+  z-index: 11;
+  display: inline-block;
+  background-color: #025DB5;
+  width: 0px;
+  height: 0px;
+  margin-left: 30px;
+  margin-top: -30px;
+  border-radius: 50%;
+  animation-name: dot2-animation;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+.dot2-1{
+  position: absolute;
+  z-index: 11;
+  display: inline-block;
+  background-color: #E997AF;
+  width: 0px;
+  height: 0px;
+  margin-left: 40px;
+  margin-top: 25px;
+  border-radius: 50%;
+  animation-name: dot2-animation;
+  animation-delay: 0.8s;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+.dot2-2{
+  position: absolute;
+  z-index: 12;
+  display: inline-block;
+  background-color: #F23C13;
+  width: 0px;
+  height: 0px;
+  margin-left: 45px;
+  margin-top: 80px;
+  border-radius: 50%;
+  animation-name: dot2-animation;
+  animation-delay: 1.3s;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes circle2-animation {
+  0%   {width: 0px; height: 0px;}
+  60%  {width: 150px; height: 150px;}
+}
+
+@keyframes dot2-animation {
+  0%   {width: 0px; height: 0px;}
+  50%  {width: 15px; height: 15px;}
+}
+
+/*--------- letter c---------*/
+
+.dot3{
+  position: absolute;
+  z-index: 12;
+  background-color: #5EB9F7;
+  width: 0px;
+  height: 0px;
+  margin-left: 100px;
+  margin-top: 100px;
+  border-radius: 50%;
+  animation-name: dot3-animation;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.dot3-1{
+  position: absolute;
+  z-index: 12;
+  background-color: #5EB9F7;
+  width: 0px;
+  height: 0px;
+  margin-left: 70px;
+  margin-top: 70px;
+  border-radius: 50%;
+  animation-name: dot3-1-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes dot3-animation {
+  98% { width: 40px; height: 40px; opacity: 1;}
+  100%{ opacity: 0; }
+}
+
+@keyframes dot3-1-animation {
+  98% { width: 20px; height: 20px; opacity: 1;}
+  100%{ opacity: 0; }
+}
+
+
+/*--------- letter d ---------*/
+.dot4{
+  position: absolute;
+  z-index: 11;
+  background-color: #FF63D7;
+  width: 10px;
+  height: 10px;
+  margin-left: 75px;
+  margin-top: 75px;
+  border-radius: 50%;
+  animation-name: dot4-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.dot4-1{
+  position: absolute;
+  z-index: 11;
+  background-color: #FF63D7;
+  width: 10px;
+  height: 10px;
+  margin-left: 75px;
+  margin-top: 75px;
+  border-radius: 50%;
+  animation-name: dot4-1-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot4-animation {
+  100% {opacity: 0; margin-left: 500px; margin-top: -350px;}
+}
+
+@keyframes dot4-1-animation {
+  100% {opacity: 0; margin-left: -500px; margin-top: -350px;}
+}
+
+/*--------- letter e ---------*/
+
+.dot5{
+  position: absolute;
+  z-index: 11;
+  background-color: #025DB5;
+  width: 10px;
+  height: 10px;
+  margin-left: 50px;
+  margin-top: -50px;
+  border-radius: 50%;
+  animation-name: dot5-animation;
+  animation-delay: 0.1s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.dot5-1{
+  position: absolute;
+  z-index: 11;
+  background-color: #025DB5;
+  width: 10px;
+  height: 10px;
+  margin-left: 70px;
+  margin-top: -40px;
+  border-radius: 50%;
+  animation-name: dot5-animation;
+  animation-delay: 0.3s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.dot5-2{
+  position: absolute;
+  z-index: 11;
+  background-color: #025DB5;
+  width: 10px;
+  height: 10px;
+  margin-left: 90px;
+  margin-top: -30px;
+  border-radius: 50%;
+  animation-name: dot5-animation;
+  animation-delay: 0.5s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot5-animation {
+  100% {margin-top: 150px; background-color: #025DB500;}
+}
+
+
+/*--------- letter f ---------*/
+
+.dot6{
+  position: absolute;
+  z-index: 11;
+  background-color: #F23C13;
+  width: 15px;
+  height: 15px;
+  margin-left: -10px;
+  margin-top: 20px;
+  border-radius: 50%;
+  animation-name: dot6-animation;
+  animation-delay: 0.1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.dot6-1{
+  position: absolute;
+  z-index: 11;
+  background-color: #F23C13;
+  width: 15px;
+  height: 15px;
+  margin-left: -10px;
+  margin-top: 20px;
+  border-radius: 50%;
+  animation-name: dot6-1-animation;
+  animation-delay: 0.1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot6-animation {
+  30% {animation-timing-function: ease-out;}
+  50% {margin-top: -90px;}
+  70% {animation-timing-function: ease-out;}
+  100% {background-color: #F23C1300; width: 30px; height: 30px;}
+}
+
+@keyframes dot6-1-animation {
+  30% {animation-timing-function: ease-out;}
+  50% {margin-top: -70px; margin-left: 50px;}
+  70% {animation-timing-function: ease-out;}
+  100% {background-color: #F23C1300; width: 20px; height: 20px;}
+}
+
+
+/*--------- letter g ---------*/
+
+.dot7{
+  position: absolute;
+  z-index: 11;
+  background-color: #025DB5;
+  width: 10px;
+  height: 10px;
+  margin-left: -100px;
+  margin-top: 150px;
+  border-radius: 50%;
+  animation-name: dot7-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.dot7-1{
+  position: absolute;
+  z-index: 11;
+  background-color: #025DB5;
+  width: 10px;
+  height: 10px;
+  margin-left: 100px;
+  margin-top: 700px;
+  border-radius: 50%;
+  animation-name: dot7-1-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot7-animation {
+  100% {background-color: #025DB500; margin-left: 700px; margin-top: -250px;}
+}
+
+@keyframes dot7-1-animation {
+  100% {background-color: #025DB500; margin-left: -300px; margin-top: -350px;}
+}
+
+/* ------------ h ------------ */
+.dot8{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  margin-left:  -200px;
+  margin-top: -200px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: dot8-animation 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.dot8-1{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  margin-left:  500px;
+  margin-top: -300px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: dot8-animation 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.dot8-2{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  margin-left:  500px;
+  margin-top: 300px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: dot8-animation 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.dot8-3{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  margin-left:  -500px;
+  margin-top: 400px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: dot8-animation 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot8-animation {
+  100% {  margin-left:  40px; margin-top: 40px; opacity: 0;}
+}
+
+/*----------------- i ----------------- */
+
+.dot9{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  width: 20px;
+  height: 20px;
+  margin-left: 75px;
+  margin-top: 75px;
+  border-radius: 50%;
+  animation-name: dot9-animation;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.dot9-1{
+  position: absolute;
+  z-index: 11;
+  background-color: #025DB5;
+  width: 15px;
+  height: 15px;
+  margin-left: 75px;
+  margin-top: 75px;
+  border-radius: 50%;
+  animation-name: dot9-1-animation;
+  animation-delay: 0.05s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.dot9-2{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  width: 10px;
+  height: 10px;
+  margin-left: 75px;
+  margin-top: 75px;
+  border-radius: 50%;
+  animation-name: dot9-2-animation;
+  animation-delay: 0.1s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.dot9-3{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  width: 10px;
+  height: 10px;
+  margin-left: 75px;
+  margin-top: 75px;
+  border-radius: 50%;
+  animation-name: dot9-3-animation;
+  animation-delay: 0.15s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.dot9-4{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  width: 10px;
+  height: 10px;
+  margin-left: 75px;
+  margin-top: 75px;
+  border-radius: 50%;
+  animation-name: dot9-4-animation;
+  animation-delay: 0.2s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot9-animation {
+  100% {margin-top: -30px; margin-left: 300px; opacity: 0;}
+}
+
+@keyframes dot9-1-animation {
+  100% {margin-top: 300px; margin-left: 300px;  opacity: 0;}
+}
+
+@keyframes dot9-2-animation {
+  100% { margin-top: 80px; margin-left: -50px;  opacity: 0;}
+}
+
+@keyframes dot9-3-animation {
+  100% {margin-top: 100px; margin-left: 250px;  opacity: 0;}
+}
+
+@keyframes dot9-4-animation {
+  100% { margin-top: -20px; margin-left: -40px;  opacity: 0;}
+}
+
+/* ---------------- j ---------------- */
+.dot10{
+  position: absolute;
+  z-index: 12;
+  background-color: #5EB9F7;
+  width: 100px;
+  height: 100px;
+  margin-left: 40px;
+  margin-top: 40px;
+  border-radius: 50%;
+  animation-name: dot10-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+@keyframes dot10-animation {
+  100% { width: 0; height: 0; opacity: 0;}
+}
+    
+/* ---------------- k ---------------- */
+.dot11{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  margin-left:  0px;
+  margin-top: -300px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: dot11-animation 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.dot11-1{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  margin-left:  500px;
+  margin-top: -300px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: dot11-animation 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.dot11-2{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  margin-left:  500px;
+  margin-top: 300px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: dot11-animation 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot11-animation {
+  100% {  margin-left:  40px; margin-top: 40px; opacity: 0;}
+}
+
+/* ------------- l ------------ */
+.dot12{
+  position: absolute;
+  z-index: 12;
+  background-color: #5EB9F7;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border-radius: 50%;
+  animation-name: dot12-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.dot12-1{
+  position: absolute;
+  z-index: 12;
+  background-color: #F23C13;
+  width: 70px;
+  height: 70px;
+  margin-left: 80px;
+  margin-top: 80px;
+  border-radius: 50%;
+  animation-name: dot12-animation;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.dot12-2{
+  position: absolute;
+  z-index: 12;
+  background-color: #F8AA23;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  margin-top: 80px;
+  border-radius: 50%;
+  animation-name: dot12-animation;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+@keyframes dot12-animation {
+  100% { width: 0; height: 0; opacity: 0;}
+}
+
+/* ----------- m ------------ */
+.dot13{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  width: 20px;
+  height: 20px;
+  margin-left: 75px;
+  margin-top: 75px;
+  border-radius: 50%;
+  animation-name: dot13-animation;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.dot13-1{
+  position: absolute;
+  z-index: 11;
+  background-color: #025DB5;
+  width: 20px;
+  height: 20px;
+  margin-left: 75px;
+  margin-top: 75px;
+  border-radius: 50%;
+  animation-name: dot13-1-animation;
+  animation-delay: 0.05s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.dot13-2{
+  position: absolute;
+  z-index: 11;
+  background-color: #E997AF;
+  width: 20px;
+  height: 20px;
+  margin-left: 75px;
+  margin-top: 75px;
+  border-radius: 50%;
+  animation-name: dot13-2-animation;
+  animation-delay: 0.1s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot13-animation {
+  100% {margin-top: -60px; margin-left: 200px; opacity: 0;}
+}
+
+@keyframes dot13-1-animation {
+  100% {margin-top: 300px; margin-left: 400px;  opacity: 0;}
+}
+
+@keyframes dot13-2-animation {
+  100% { margin-top: 80px; margin-left: -50px;  opacity: 0;}
+}
+
+/* ------------ n --------------- */
+
+.dot14{
+  position: absolute;
+  z-index: 11;
+  background-color: #025DB5;
+  width: 10px;
+  height: 10px;
+  margin-left: 70px;
+  margin-top: 40px;
+  border-radius: 50%;
+  animation-name: dot14-animation;
+  animation-delay: 0.1s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.dot14-1{
+  position: absolute;
+  z-index: 11;
+  background-color: #CE220D;
+  width: 10px;
+  height: 10px;
+  margin-left: 80px;
+  margin-top: 45px;
+  border-radius: 50%;
+  animation-name: dot14-animation;
+  animation-delay: 0.15s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.dot14-2{
+  position: absolute;
+  z-index: 11;
+  background-color: #025DB5;
+  width: 10px;
+  height: 10px;
+  margin-left: 90px;
+  margin-top: 50px;
+  border-radius: 50%;
+  animation-name: dot14-animation;
+  animation-delay: 0.2s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot14-animation {
+  100% {margin-left: -150px; margin-top: -30px; background-color: #025DB500;}
+}
+
+/* --------------- o --------------- */
+
+.dot15{
+  position: absolute;
+  z-index: 11;
+  background-color: #F23C13;
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 50%;
+  animation-name: dot15-animation;
+  animation-delay: 0.1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.dot15-1{
+  position: absolute;
+  z-index: 11;
+  background-color: #F23C13;
+  width: 15px;
+  height: 15px;
+  margin-left: 60px;
+  margin-top: -20px;
+  border-radius: 50%;
+  animation-name: dot15-1-animation;
+  animation-delay: 0.05s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot15-animation {
+  30% {animation-timing-function: ease-out;}
+  50% {margin-top: 70px;}
+  70% {animation-timing-function: ease-out;}
+  100% {background-color: #F23C1300; }
+}
+
+@keyframes dot15-1-animation {
+  30% {animation-timing-function: ease-out;}
+  50% {margin-top: 90px; margin-left: 50px;}
+  70% {animation-timing-function: ease-out;}
+  100% {background-color: #F23C1300; }
+}
+
+/* ----------- p ------------- */
+.dot16{
+  position: absolute;
+  z-index: 12;
+  background-color: #5EB9F7;
+  width: 0px;
+  height: 0px;
+  margin-left: 40px;
+  margin-top: 40px;
+  border-radius: 50%;
+  animation-name: dot16-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.dot16-1{
+  position: absolute;
+  z-index: 12;
+  background-color: #F23C13;
+  width: 10px;
+  height: 10px;
+  margin-left: 40px;
+  margin-top: 40px;
+  border-radius: 50%;
+  animation-name: dot16-1-animation;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot16-animation {
+  98% { width: 80px; height: 80px; opacity: 1;}
+  100%{ opacity: 0; }
+}
+
+@keyframes dot16-1-animation {
+  100%{ margin-top:180px; opacity: 0; }
+}
+
+/* ---------- q ----------- dot9 */
+
+/* ---------- r ----------- dot2 */
+
+/* ---------- s ----------- dot1 */
+
+/* ---------- t ----------- */
+
+.dot20{
+  position: absolute;
+  z-index: 11;
+  background-color: rgba(53, 45, 178, 0.8);
+  margin-left:  -200px;
+  margin-top: -200px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  animation: dot20-animation 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.dot20-1{
+  position: absolute;
+  z-index: 11;
+  background-color: rgba(53, 45, 178, 0.8);
+  margin-left:  500px;
+  margin-top: -300px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  animation: dot20-animation 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.dot20-3{
+  position: absolute;
+  z-index: 11;
+  background-color: rgba(53, 45, 178, 0.8);
+  margin-left:  -500px;
+  margin-top: 400px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  animation: dot20-animation 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot20-animation {
+  100% {  margin-left:  40px; margin-top: 40px; opacity: 0;}
+}
+
+/* ------------- u -------------- */
+.dot21{
+  position: absolute;
+  z-index: 12;
+  background-color: #5EB9F7;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 50%;
+  animation-name: dot21-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.dot21-1{
+  position: absolute;
+  z-index: 12;
+  background-color: rgba(53, 45, 178, 0.8);
+  width: 30px;
+  height: 30px;
+  margin-left: 40px;
+  margin-top: 40px;
+  border-radius: 50%;
+  animation-name: dot21-animation;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+@keyframes dot21-animation {
+  100% { width: 0; height: 0; opacity: 0;}
+}
+
+/* ------------- v ------------- */
+.dot22{
+  position: absolute;
+  z-index: 11;
+  background-color: #CE220D;
+  width: 10px;
+  height: 10px;
+  left: 30px;
+  top: 30px;
+  border-radius: 50%;
+  animation-name: dot22-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dot22-animation {
+  70%   {background-color: #CE220D}
+  100% {left: 500px; top: -330px; background-color: #CE220D00;}
+}
+
+/* --------- w ------------- */
+.dot23{
+  position: absolute;
+  z-index: 12;
+  background-color: #352DB2;
+  width: 70px;
+  height: 70px;
+  margin-left: 40px;
+  margin-top: 40px;
+  border-radius: 50%;
+  animation-name: dot23-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+@keyframes dot23-animation {
+  100% { width: 0; height: 0; opacity: 0; margin-left: -40px; margin-top: 80px;}
+}
+
+/* ------------ x -------------- dot 8 */
+
+/* ------------ y -------------- */
+

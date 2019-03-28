@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hw2</title>
+  <style>
+
+    body{
+      margin: 0px;
+      display: flex;
+      flex-direction: row;
+    }
+    div{
+      width: 10vw;
+      height: 100vh;
+    }
+  </style>
+
+</head>
+<body>
+
+<script>
+  var count = 0;
+
+  while(count < 10){
+    var element = document.createElement("div");
+    document.body.appendChild(element);
+    var x = Math.floor(Math.random() * 360);
+    var y = Math.floor(Math.random() * 100);
+    var z = Math.floor(Math.random() * 100);
+    var bgColor = "hsl(" +x+ ","+  y +"%," + z +"%)";
+    element.style.backgroundColor= bgColor;
+    count = count + 1;
+  }
+
+</script>
+
+</body>
+</html>

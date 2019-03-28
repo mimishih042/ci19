@@ -1,0 +1,82 @@
+    body{
+      background-color: black;
+      margin: 0px;
+    }
+
+    .container{
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: auto;
+    }
+
+    .fade{
+      opacity: 0.5;
+    }
+
+    .year{
+      position: absolute;
+      background-color: black;
+      color: white;
+      font-family: acumin-pro, sans-serif;
+      font-size: 1em;
+      z-index: 100;
+      padding-top: 1px;
+      padding-bottom: 2px;
+      padding-right: 7px;
+      padding-left: 7px;
+    }
+
+    /*1931*/
+    #thirty-one{
+      position: absolute;
+      left: 100px;
+      top: 50px;
+    }
+    #thirty-one-year{
+      transform: rotate(20deg);
+      left: 80px;
+      top: 20px;
+    }
+
+    #thirty-one-img{
+      opacity: 0.7;
+    }
+
+    #thirty-one-year:hover{
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+    }
+
+    #thirty-one-year:hover + #thirty-one-img{
+      opacity: 1;
+    }
+
+    /*2001*/
+    #one{
+      position: absolute;
+      transform: rotate(15deg);
+      left: 280px;
+      top: 90px;
+    }
+
+    #one-year{
+      top: 200px;
+      left: 135px;
+      transform: rotate(-10deg);
+    }
+
+    #one-img{
+      opacity: 0.7;
+    }
+
+    #one-year:hover{
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+    }
+
+    #one-year:hover + #one-img{
+      opacity: 1;
+    }

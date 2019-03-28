@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    var url = "https://raw.githubusercontent.com/sssssuty/ci19/master/lab/March.27/water%201.json";
+
+    fetch(url)
+    .then(function(response){return response.json();})
+    .then(function(json){ buildPage(json);})
+
+    function buildPage(data){
+        for(var i = 0; i < data.length; i = i +1){
+            var liquid = document.createElement("h1");
+            var oz = document.createElement("h3");
+            var time = document.createElement("h2");
+            document.body.appendChild(liquid);
+            document.body.appendChild(oz);
+            document.body.appendChild(time);
+            liquid.innerHTML = data[i].liquid;
+            oz.innerHTML = data[i].oz;
+            time.innerHTML = data[i].time;
+
+            //add image onto the json
+            // var image = document.createElement("img");
+            // img.setAttribute("src", data[i].url);
+            // document.body.appendChild(image);
+
+            if(data[i].liquid == "coffee"){
+                liquid.style.color = "brown";
+            }
+            if(data[i].liquid == "water"){
+                liquid.style.color = "yellow";
+            }
+
+            var line = document.createElement("hr");
+            document.body.appendChild(line);
+        }
+    }
+</script>
+</body>
+</html>
