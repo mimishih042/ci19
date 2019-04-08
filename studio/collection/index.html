@@ -1,33 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Collection</title>
+  <title>collection</title>
+  <link rel="stylesheet" href="https://use.typekit.net/ldw7bjn.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="https://use.typekit.net/qgm2exi.css">
   <script src="jquery-3.3.1.min.js"></script>
-  <script src="init.js"></script>
-
+  <script src="collection.js"></script>
 </head>
-
 <body>
 
-<div class="container" id="append">
+  <div id="container">
+    <!-- headline -->
+    <div id="title">Newspaper Collection on my Birthday (August 19) starting from 1914</div>
 
-  <div id="thirtyone" class="element">
-    <span id="thirty-one-year" class="year" onmouseover="mouseOver(one)" onmouseout="mouseOut(one)" onclick="fullImg('img/1931.jpg')">1931</span>
-    <div>
-      <img id="thirty-one-img" src="edit-img/1931.png" style="width: 200px;">
+    <!-- filter -->
+    <div id="filter">
+      <div id="filterYears">
+        <span class="years">1910s</span>
+        <span class="years">1920s</span>
+        <span class="years">1930s</span>
+        <span class="years">1940s</span>
+        <span class="years">1950s</span>
+        <span class="years">1960s</span>
+        <span class="years">1970s</span>
+        <span class="years">1980s</span>
+        <span class="years">1990s</span>
+        <span class="years">2000s</span>
+        <span class="years">2010s</span>
+      </div>
+
+      <div id="filterElem">
+        <span class="years">Images</span>
+        <span class="years">Years</span>
+        <span class="years">Headlines</span>
+      </div>
     </div>
+    
+    <!-- outcome -->
+    <div id="elemContainer">
+      
+
+        <div class="box">
+          <h1 class="headlines">"Fierce Fighting On Extended Front,"Curt News of War's First Great Battle, Belgians Stop Germans With Bayonets</h1>
+          <img src="edit-img/1914.jpg" class="edit">
+          <img src="img/1914.jpg" class="nonedit">
+        </div>
+        <div class="boxYear">1914</div>
+        
+
+        <div class="box">
+          <h1 class="headlines">"White Star Liner Arabic Sunk By German Submarine Near the Scene of the Lusitania Disaster</h1>
+        </div>
+
+        <div class="box">
+          <h1 class="headlines">Further Anglo-French Successes</h1>
+        </div>
+
+        <div class="box">
+          <h1 class="headlines">Los Banqueros Norteamericanos Ofrecen Cubrir Los Emprestitos En Condiciones Excepcionales</h1>
+        </div>
+
+        <div class="box">
+          <h1 class="headlines">French and British take 2,200 Germans</h1>
+        </div>
+
+        <div class="box">
+          <h1 class="headlines">I.R.T. Strile ends; All trains run. Men get immediate 25 per cent. Smith and Nixon arrange set.</h1>
+        </div>
+
+    </div>
+
+
   </div>
 
-  <div id="one" class="element" >
-    <span id="one-year" class="year" onmouseover="mouseOver(thirtyone)" onmouseout="mouseOut(thirtyone)" onclick="fullImg('img/2001.jpg')">2001</span>
-    <div>
-      <img id="one-img" src="edit-img/2001.png" style="width: 150px;">  
-    </div>   
-  </div>
 
-</div>
 
 </body>
 </html>
