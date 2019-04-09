@@ -28,6 +28,7 @@ function buildSection(data){
     unclickedImg.src = data[i].edit;
 
     //adjust the size of some img
+    // data[7].edit.style.height = 60 + "px";
 
 
     var yearBox = document.createElement("div");
@@ -51,6 +52,7 @@ function randPosition(year, image){
   // year
     var w = window.innerWidth;
     var random = Math.floor(Math.random() * w );
+
     if (random > w - 174) {
       random = w - 174;
     }else if(random < 8){
@@ -62,9 +64,10 @@ function randPosition(year, image){
     console.log(w);
 
   //image
+    var posArray = [5, 10, 15, 20, 25, 30, 35, 40, 45];
     var randomImg = Math.floor(Math.random() * 100 );
     if (randomImg > 50) {
-      randomImg = 45;
+      randomImg = posArray[Math.floor(Math.random() * 9 )];
     }else if(randomImg < 1){
       randomImg = 1;
     }
@@ -72,6 +75,10 @@ function randPosition(year, image){
     var leftImg = randomImg + "%" ;    
     image.style.marginLeft = leftImg;
     console.log(leftImg);
+
+
+
+
 }
 
 
