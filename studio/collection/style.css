@@ -59,7 +59,8 @@ body{
 }
 
 .years:hover{
-  color: black;
+  text-decoration: line-through;
+  cursor: pointer;
 }
 
 #elemContainer{
@@ -88,8 +89,9 @@ body{
 }
 
 .headlines:hover {
-  color: black;
+  font-style: normal;
   animation: slide-left 20s;
+  cursor: pointer;
 }
 
 .boxYear{

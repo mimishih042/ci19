@@ -3,14 +3,15 @@ $(document).ready(function() {
 var url = "https://mimishih042.github.io/ci19/studio/collection/data.json";
   fetch(url)
     .then(function(response){return response.json();})
-    .then(function(json){buildSection(json, 0, 2018 - 1913);})
+    .then(function(json){
+        buildSection(json, 0, 2018 - 1913);
+
+
+    })
 
 
 });
 
-
-// var min = 0;
-// var max = 2018 - 1913;
 
 function buildSection(data, min, max){
 
@@ -27,27 +28,27 @@ function buildSection(data, min, max){
     unclickedImg.className = "edit";
     unclickedImg.src = data[i].edit;
 
-    //adjust the size of some img
-    // data[7].edit.style.height = 60 + "px";
-
-
     var yearBox = document.createElement("div");
     yearBox.className = "boxYear";
     yearBox.innerHTML = data[i].year ;
 
-    randPosition(yearBox, unclickedImg);
+
+    randPosYear(yearBox);
+    randPosImg(unclickedImg);
     box.appendChild(unclickedImg);   
 
     var elemContainer = document.getElementById("elemContainer");
     elemContainer.appendChild(box);
     elemContainer.appendChild(yearBox);
 
-    console.log(elemContainer);
+    // $( ".boxYear" ).mouseover(function() {
+    //     randPosYear(yearBox);
+    // })
   }
 
 }
 
-function randPosition(year, image){
+function randPosYear(year){
 
   // year
     var w = window.innerWidth;
@@ -61,9 +62,11 @@ function randPosition(year, image){
     var left = random + "px" ;    
     year.style.marginLeft = left;
     console.log(left);
-    console.log(w);
+}
 
-  //image
+function randPosImg(image){
+
+    //image
     var posArray = [5, 10, 15, 20, 25, 30, 35, 40, 45];
     var randomImg = Math.floor(Math.random() * 100 );
     if (randomImg > 50) {
@@ -74,21 +77,28 @@ function randPosition(year, image){
 
     var leftImg = randomImg + "%" ;    
     image.style.marginLeft = leftImg;
-    console.log(leftImg);
-
-
-
-
+    // console.log(leftImg);
 }
 
-
-function closeImg(){
-    var image = document.getElementsByClassName("edit");
-    image.style.display = "none";
-    console.log(image);
+function selectorState(className, display){
+  var x = document.getElementsByClassName(className);
+  for (var i = 0; i < x.length; i++){
+        if(x[i].style.display === "none"){
+            x[i].style.display = display;
+        }else{
+            x[i].style.display = "none";
+        }
+    }
 }
 
-function yearOne(){
-    min = 0;
-    max = 6;
+function headlineState(){
+    var x = document.getElementsByClassName('headlines');
+    for (var i = 0; i < x.length; i++) {
+        if(x[i].style.color === "blue"){
+            x[i].style.color = "white";
+        }else{
+            x[i].style.color = "blue";
+
+        }
+    }
 }
