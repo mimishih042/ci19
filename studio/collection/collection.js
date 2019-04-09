@@ -20,6 +20,7 @@ function buildSection(data){
 
     var yearBox = document.createElement("div");
     yearBox.className = "boxYear";
+    // randPosition(yearBox);
     yearBox.innerHTML = data[i].year ;
 
     var elemContainer = document.getElementById("elemContainer");
@@ -30,3 +31,10 @@ function buildSection(data){
   }
 
 }
+
+// function randPosition(element){
+//     var w = window.innerWidth;
+//     var left = (Math.floor(Math.random() * w - 150)) + "px" ;
+//     element.style.marginLeft = left;
+//     console.log(left);
+// }
