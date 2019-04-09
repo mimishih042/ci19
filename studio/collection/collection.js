@@ -9,10 +9,12 @@ var url = "https://mimishih042.github.io/ci19/studio/collection/data.json";
 });
 
 
-
+var min = 0;
+var max = 2018 - 1913;
 
 function buildSection(data){
-  for (var i = 0; i < data.length; i++) {
+
+  for (var i = min; i < max; i++) {
     var box = document.createElement("div");
     box.className = "box";
 
@@ -24,6 +26,9 @@ function buildSection(data){
     var unclickedImg = document.createElement("img");
     unclickedImg.className = "edit";
     unclickedImg.src = data[i].edit;
+
+    //adjust the size of some img
+
 
     var yearBox = document.createElement("div");
     yearBox.className = "boxYear";
@@ -67,4 +72,16 @@ function randPosition(year, image){
     var leftImg = randomImg + "%" ;    
     image.style.marginLeft = leftImg;
     console.log(leftImg);
+}
+
+
+function closeImg(){
+    var image = document.getElementsByClassName("edit");
+    image.style.display = "none";
+    console.log(image);
+}
+
+function yearOne(){
+    min = 0;
+    max = 6;
 }
