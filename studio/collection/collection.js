@@ -3,16 +3,16 @@ $(document).ready(function() {
 var url = "https://mimishih042.github.io/ci19/studio/collection/data.json";
   fetch(url)
     .then(function(response){return response.json();})
-    .then(function(json){buildSection(json);})
+    .then(function(json){buildSection(json, 0, 2018 - 1913);})
 
 
 });
 
 
-var min = 0;
-var max = 2018 - 1913;
+// var min = 0;
+// var max = 2018 - 1913;
 
-function buildSection(data){
+function buildSection(data, min, max){
 
   for (var i = min; i < max; i++) {
     var box = document.createElement("div");
