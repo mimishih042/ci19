@@ -18,6 +18,9 @@ body{
 }
 
 #title{
+  position: fixed;
+  width: 100vw;
+  top: 0px;
   font-size: 1em;
   font-family: interstate, sans-serif;
   font-style: normal;
@@ -31,7 +34,7 @@ body{
 #filter{
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 65px;
   margin-bottom: 30px;
   line-height: 1.2em;
   font-size: 1.3em;
@@ -113,6 +116,16 @@ body{
   background-color: blue;
   width: 150px;
   height: 90px;
+}
+
+.fullImg{
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 250px;
+  background-image: url('img/1914.jpg');
 }
 
 @keyframes headline {

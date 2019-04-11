@@ -4,13 +4,18 @@ var url = "https://mimishih042.github.io/ci19/studio/collection/data.json";
   fetch(url)
     .then(function(response){return response.json();})
     .then(function(json){
-        buildSection(json, 0, 2018 - 1913);
-
-
+        // var x = 0;
+        // var y = 6;
+        filter(0,6);
+        buildSection(json, x, y);
+        
     })
-
-
 });
+
+function filter(x, y){
+    this.x = x;
+    this.y = y;
+}
 
 
 function buildSection(data, min, max){
@@ -28,10 +33,34 @@ function buildSection(data, min, max){
     unclickedImg.className = "edit";
     unclickedImg.src = data[i].edit;
 
+    unclickedImg.onmouseover = function(event) {
+
+        var year = event.target.src.slice(event.target.src.length-8, event.target.src.length);
+        var newPath = "img/" + year;
+        event.target.src = newPath;
+        event.target.style.width = 400 + "px";
+        event.target.style.height = "auto";
+        event.target.style.position = "absolute";
+        event.target.style.zIndex = "1000" + i;
+
+    }
+
+    unclickedImg.onmouseout = function(event) {
+        var year = event.target.src.slice(event.target.src.length-8, event.target.src.length);
+        var newPath = "edit/" + year;
+        event.target.src = newPath;
+        event.target.style.width ="auto";
+        event.target.style.height = 80+"px";
+    }
+
     var yearBox = document.createElement("div");
     yearBox.className = "boxYear";
     yearBox.innerHTML = data[i].year ;
 
+    yearBox.onmouseover = function(event) {
+        randPosYear(event.target);
+        console.log(event.target);
+    }
 
     randPosYear(yearBox);
     randPosImg(unclickedImg);
@@ -40,10 +69,6 @@ function buildSection(data, min, max){
     var elemContainer = document.getElementById("elemContainer");
     elemContainer.appendChild(box);
     elemContainer.appendChild(yearBox);
-
-    // $( ".boxYear" ).mouseover(function() {
-    //     randPosYear(yearBox);
-    // })
   }
 
 }
