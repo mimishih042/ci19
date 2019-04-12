@@ -1,6 +1,6 @@
 html{
   scroll-behavior: smooth;
-  background-color: #fbfbfb;
+/*  background-color: #fbfbfb;*/
 }
 
 body{
@@ -16,10 +16,24 @@ a:visited{
   color: blue;
 }
 
+#date{
+  position: fixed;
+  z-index: -100;
+  color: yellow;
+  font-size: 10em;
+  font-family: interstate, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  transform: rotate(-20deg);
+  left: 15%;
+  top: 30%;
+
+}
+
 .edit{
   height: 70px;
   position: absolute;
-  margin-top: -75px;
+  margin-top: 5px;
   margin-left: 50%;
 
 }
@@ -94,9 +108,10 @@ a:visited{
   border-top-style: solid;
   border-top-color: blue;
   border-top-width: 3px;
+  height: 78px;
 }
 
-.box:nth-child(3n){
+.headlines:nth-child(3n){
   -webkit-text-fill-color: white; 
   -webkit-text-stroke-width: 1.2px;
   -webkit-text-stroke-color: blue;

@@ -11,15 +11,6 @@ $(document).ready(function() {
     })
 });
 
-// function assignNum(){
-//   document.getElementById("ten").onclick = function(event){ 
-//     min = 0;
-//     max = 6;
-//   }  
-//   return min;
-//   return max;
-// }
-
 function getPosition(element){
         var e = document.getElementById(element);
         var left = 0;
@@ -84,9 +75,11 @@ function buildSection(data){
 
     randPosYear(yearBox);
     randPosImg(unclickedImg);
-    box.appendChild(unclickedImg);   
+    // box.appendChild(unclickedImg);
+    // box.appendChild(yearBox);   
 
     var elemContainer = document.getElementById("elemContainer");
+    elemContainer.appendChild(unclickedImg);
     elemContainer.appendChild(box);
     elemContainer.appendChild(yearBox);
   }
@@ -106,7 +99,6 @@ function randPosYear(year){
     }
     var left = random + "px" ;    
     year.style.marginLeft = left;
-    console.log(left);
 }
 
 function randPosImg(image){
@@ -137,11 +129,12 @@ function selectorState(className, display){
 function headlineState(){
     var x = document.getElementsByClassName('headlines');
     for (var i = 0; i < x.length; i++) {
-        if(x[i].style.color === "blue"){
-            x[i].style.color = "white";
+        if(x[i].style.marginTop === -75){
+            x[i].style.marginTop = 0;
         }else{
-            x[i].style.color = "blue";
+            x[i].style.marginTop = -75;
 
         }
+
     }
 }
