@@ -1,12 +1,31 @@
+html{
+  scroll-behavior: smooth;
+  background-color: #fbfbfb;
+}
+
 body{
   margin: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
+a:visited{
+  text-decoration: none;
+  color: blue;
+}
+
 .edit{
-  height: 80px;
+  height: 70px;
   position: absolute;
-  margin-top: -85px;
+  margin-top: -75px;
   margin-left: 50%;
+
+}
+
+.edit:hover{
+  cursor: pointer;
 }
 
 .nonedit{
@@ -28,12 +47,11 @@ body{
   color: white;
   background-color: blue;
   padding: 10px;
+  z-index: 3000;
   /*animation: headline 10s infinite;*/
 }
 
 #filter{
-  display: flex;
-  flex-direction: column;
   margin-top: 65px;
   margin-bottom: 30px;
   line-height: 1.2em;
@@ -47,6 +65,7 @@ body{
 
 #filterYears{
   display: flex;
+  flex-direction: column;
   flex-direction: row;
   justify-content: center;
 }
@@ -74,34 +93,38 @@ body{
 .box{
   border-top-style: solid;
   border-top-color: blue;
-  border-top-width: 4px;
+  border-top-width: 3px;
 }
 
+.box:nth-child(3n){
+  -webkit-text-fill-color: white; 
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: blue;
+}
 
 .headlines{
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 2.5em;
+  font-size: 2em;
   font-family: interstate, sans-serif;
   font-style: italic;
   font-weight: 700;
   color:blue;
   padding: 10px;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .headlines:hover {
   font-style: normal;
-  animation: slide-left 20s;
-  cursor: pointer;
+  animation: slide-left 20s;  
 }
 
 .boxYear{
   position: absolute;
   margin-left: 0px;
-  margin-top: -90px;
-  z-index: 10;
+  margin-top: -60px;
+  z-index: 1005;
 
   display: flex;
   justify-content: center;
@@ -115,7 +138,10 @@ body{
 
   background-color: blue;
   width: 150px;
-  height: 90px;
+  height: 80px;
+
+  animation: year 1s;
+  animation-fill-mode: forwards;
 }
 
 .fullImg{
@@ -145,6 +171,13 @@ body{
     margin-left: -200%;
   }
 }
+
+@keyframes year {
+  100% {margin-top: -80px;}
+  
+}
+
+
 
 
 
