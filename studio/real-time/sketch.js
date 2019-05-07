@@ -58,7 +58,7 @@ let f;
 
 function askData(){
   keyW = "13e274855e4b79a0c031afc293b780e8";
-  urlW = "http://api.openweathermap.org/data/2.5/weather?q=" + input.value() + "&APPID=" + keyW;
+  urlW = "https://api.openweathermap.org/data/2.5/weather?q=" + input.value() + "&APPID=" + keyW;
   loadJSON(urlW,gotDataW);
 
   keyN = "LLxU2AhBI8NsLDKAstr7p65BmW4Tj7A5";
