@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wave text</title>
+
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <!-- p5.js document -->    
+    <script src="p5.min.js"></script>
+    <script src="addons/p5.dom.min.js"></script>
+    <script src="addons/p5.dom.js"></script>
+    <script src="addons/p5.sound.min.js"></script>
+    <script type="text/javascript" src="sketch.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <style> 
+      body,html {
+        padding: 0; 
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+      } 
+
+      canvas {
+        vertical-align: top;
+      } 
+
+      #user{
+        margin-left: 45%;
+        position: fixed;
+        margin-top: 30px;
+        box-sizing: border-box;
+      }
+
+      input {
+        padding: 4px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #383838;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 12px;
+        margin-left: 20px;
+      }
+
+  </style>
+</head>
+<body>
+  <div id="user">
+    <p>
+      <input id="city" placeholder="City Name"></input>
+      <button id="submit">submit</button>
+    </p>
+  </div>
+</body>
+</html>
