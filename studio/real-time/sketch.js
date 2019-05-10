@@ -21,7 +21,7 @@ let mapLon;
 // api key for nytimes api
 var urlN;
 var keyN;
-var abstracts;
+var abstracts = [];
 var headline;
 var flatten;
 var splitString = [];
@@ -37,6 +37,8 @@ var input;
 let can;
 let bg = 1;
 let pg;
+let tileX;
+let tileY;
 
 let points;
 let bounds;
@@ -72,7 +74,7 @@ function gotDataW(data){
   lat = data.coord.lat;
   lon = data.coord.lon;
   speed = data.wind.speed;
-  name = data.name;
+  // name = data.name;
 
   color = map(lon, -180,180, 0, 358);
   color1 = map(lat,90,-90, 0, 358);
@@ -80,24 +82,33 @@ function gotDataW(data){
   mapLon = map(lon, -180,180, 0, windowWidth);
   textSpeed = map(speed, 0, 10, 0, 1);
 
-  console.log(data);
-  console.log(name);
+  // console.log(data);
+  // console.log(name);
 }
 
 function gotDataN(data){
     // finished splitting to words
-    abstracts= data.response.docs[0].headline.main;
-    var up = abstracts.toUpperCase();
+    content.length = 0;
+    for(var i = 0; i < 10; i ++){
+      abstracts[i]= data.response.docs[i].lead_paragraph;
+      var up = abstracts[i].toUpperCase();
+    }   
     splitString = split(up, ' ');
-
     //finished split into char and push it into content
     for(var  i = 0 ; i < splitString.length; i++){
       splitChar[i] = split(splitString[i],'');
-      content.push(splitChar[i]);
-      flatten = content.flat(2);
+      // content.push(splitChar[i]);
+      // flatten = content.flat(2);
+      flatten = splitChar.flat(1);
     }
-  finalData = arrayTo2DArray2(flatten, 40);
-  console.log(finalData);
+
+    for(var i = 0 ; i < floor(tileX * tileY/flatten.length); i ++){
+      content.push(flatten);
+    }
+
+  var flattenfinal = content.flat();
+  console.log(flattenfinal);
+  finalData = arrayTo2DArray2(flattenfinal, tileX);
 }
 
 function arrayTo2DArray2(list, howMany) {
@@ -113,42 +124,42 @@ function arrayTo2DArray2(list, howMany) {
 function setup() {
   colorMode(HSB, 360, 100,100,1);
   background(bg, 100, 100);
+  tileX = floor(windowWidth/22)-3;
+  tileY = floor(windowHeight/22);
 
   can = createCanvas(windowWidth, windowHeight);
   button = select('#submit');
   button.mousePressed(askData);
   input = select("#city");
 
-  pg = createGraphics(windowWidth * 3/4, windowHeight *3/4);
+  pg = createGraphics(windowWidth, windowHeight);
   pg.background(0);
-  // vel = createVector();
   a = random(windowWidth - 500);
   b = random(windowHeight - 200);
 }
 
 function draw() {
   background(0);
-  pg.background(0);
+  pg.colorMode(HSB);
+  pg.background(color1, 100, 100);
   angle+=0.1;
 
   for(var j = 0; j < finalData.length; j++){
     eachData = finalData[j];
     for(var i = 0; i < eachData.length; i++){ 
       var y = noise(j * scale, i * scale, frameCount * 0.003) * maxHeight;
-      
-      pg.colorMode(HSB);
       pg.textAlign(CENTER, CENTER); 
       pg.textFont('Helvetica');
 
-      pg.textSize(100);
-      pg.fill(color1, 100, 95);
-      pg.text(name.toUpperCase(), windowWidth/2.7, windowHeight * 3/8);
+      // pg.textSize(100);
+      // pg.fill(color1, 100, 95);
+      // pg.text(name.toUpperCase(), windowWidth/2.7, windowHeight * 3/8);
 
       let c = sin(angle +i/PI);
       pg.textSize(15 + 4 * c);
       let alpha = map(c, -1, 1, 0, 100);
       pg.fill(color, 100, 95, alpha);
-      pos = createVector(50 + 22*i, 50 +22*j);
+      pos = createVector(50+22*i, 50+22*j);
 
       pg.push();
       pg.translate(pos.x, pos.y,0);
@@ -157,7 +168,7 @@ function draw() {
     }
   }
 
-  image(pg, windowWidth * 1/8, windowHeight *1/7);
+  image(pg, 0, 0);
 
 }
 
